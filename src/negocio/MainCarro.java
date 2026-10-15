@@ -3,10 +3,13 @@ package negocio;
 public class MainCarro {
     static void main() {
         System.out.println("El número total de carros es: " + Carro.getNumCarros());
+        System.out.println("El IVA de los vehículos es: " + Carro.getIva());
 
         Carro c1 = new Carro();
-        Carro c2 = new Carro();
-        Carro c3 = new Carro();
+
+        System.out.println("El precio de venta al público del carro 1 es: " + c1.calcularPrecioVenta(25999));
+        Carro c2 = new Carro(5, 10);
+        Carro c3 = new Carro(7, 35);
 
         System.out.println("El número total de carros es: " + Carro.getNumCarros());
 

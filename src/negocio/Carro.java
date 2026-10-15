@@ -6,15 +6,25 @@ public class Carro {
 
     //atributo de clase
     private static int numCarros = 0;
+    //constante de clase
+    private static final double IVA = 0.15;
 
     public Carro(int potencia, double velocidad){
-        setPotencia(potencia);
-        setVelocidad(velocidad);
+        this.setPotencia(potencia);
+        this.setVelocidad(velocidad);
         numCarros++;
     }
 
     public Carro(){
         numCarros++;
+    }
+
+    public static double getIva() {
+        return IVA;
+    }
+
+    public double calcularPrecioVenta(double precio){
+        return precio + (precio * IVA);
     }
 
     /* metodo set() (establecer valores)
