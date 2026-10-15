@@ -1,8 +1,21 @@
 package negocio;
 
 public class Carro {
-    public int potencia;
-    public double velocidad;
+    private int potencia;
+    private double velocidad;
+
+    //atributo de clase
+    private static int numCarros = 0;
+
+    public Carro(int potencia, double velocidad){
+        setPotencia(potencia);
+        setVelocidad(velocidad);
+        numCarros++;
+    }
+
+    public Carro(){
+        numCarros++;
+    }
 
     /* metodo set() (establecer valores)
       "siempre" es void, siempre tiene parametro y este es el mismo tipo del atributo */
@@ -26,6 +39,11 @@ public class Carro {
     public double getVelocidad(){
         return velocidad;
     }
+
+    public static int getNumCarros(){
+        return numCarros;
+    }
+    //el static permite que el métod pueda ser invocada sin la necesidad de un objeto presente
 
     public void acelerar(){
         velocidad += potencia;

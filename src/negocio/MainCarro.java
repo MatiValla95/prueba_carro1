@@ -2,9 +2,13 @@ package negocio;
 
 public class MainCarro {
     static void main() {
+        System.out.println("El número total de carros es: " + Carro.getNumCarros());
+
         Carro c1 = new Carro();
         Carro c2 = new Carro();
         Carro c3 = new Carro();
+
+        System.out.println("El número total de carros es: " + Carro.getNumCarros());
 
         /*c1.potencia = 2;
         c1.velocidad = 60;
